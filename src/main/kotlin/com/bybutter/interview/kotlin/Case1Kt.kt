@@ -15,6 +15,6 @@ object Case1Kt : Case1{
      */
     @Easy
     override fun add(value1: String, value2: String): String {
-        throw NotImplementedError("TODO")
+        TODO()
     }
 }

@@ -14,6 +14,6 @@ object Case3Kt : Case3{
      */
     @Normal
     override fun times(value1: String, value2: String): String {
-        throw NotImplementedError("TODO")
+        TODO()
     }
 }
