@@ -2,24 +2,28 @@
 感谢你有兴趣成为黄油相机后端工程师，在这里我们为各位候选人提供了一份编程题。藉此编程题，希望能够直接展现你的编码能力与技术，也作为入职前的热身运动。
 
 ## 说明
-我们本次共准备了 5 道题目，供你选择，分别有两道 Easy，两道 Normal 与 一道 Hard 题目。你可以无关顺序自由选做，也无需都做完。
+我们本次共准备了 5 道题目，供你选择，分别有两道 Easy，两道 Normal 与 一道 Hard 题目。你可以无关顺序自由选做，也无需都做完。如果你对于题目或者工程有任何疑问欢迎创建 issue。
 
 ## 语言选择
 题目支持 Java 与 Kotlin 答题，Java 在 `com.bybutter.interview.java` 包下答题，Kotlin 在 `com.bybutter.interview.kotlin` 包下答题。
 
 ### 使用 Java 进行答题
-01. 使用 IDE 打开工程
-02. 在 `com.bybutter.interview.java` 包下选择想要答的题，共 Case1Java-Case5Java 五道题，请自由选做
-03. 选择好想要回答的题之后，删除方法体内的 `throw new NotImplementedError("TODO");`
-04. 开始编写实现
-05. 在 `test` 包内提供了一些测试用例，供你 debug 使用
+01. fork 本 repo，并 clone 下来
+02. 使用 IDE 打开工程
+03. 在 `com.bybutter.interview.java` 包下选择想要答的题，共 Case1Java-Case5Java 五道题，请自由选做
+04. 选择好想要回答的题之后，删除方法体内的 `throw new NotImplementedError("TODO");`
+05. 开始编写实现
+06. 在 `test` 包内提供了一些测试用例，供你 debug 使用
+07. 在结束答题后，创建 PR
 
 ### 使用 Kotlin 进行答题
-01. 使用 IDE 打开工程
-02. 在 `com.bybutter.interview.kotlin` 包下选择想要答的题，共 Case1Kt-Case5Kt 五道题，请自由选做
-03. 选择好想要回答的题之后，删除方法体内的 `TODO()`
-04. 开始编写实现
-05. 在 `test` 包内提供了一些测试用例，供你 debug 使用
+01. fork 本 repo，并 clone 下来
+02. 使用 IDE 打开工程
+03. 在 `com.bybutter.interview.kotlin` 包下选择想要答的题，共 Case1Kt-Case5Kt 五道题，请自由选做
+04. 选择好想要回答的题之后，删除方法体内的 `TODO()`
+05. 开始编写实现
+06. 在 `test` 包内提供了一些测试用例，供你 debug 使用
+07. 在结束答题后，创建 PR
 
 ## Case1 长整数加法
 需要一个将两个数字字符串相加的实现，由于字符串长度不定，需要你对超长字符串做相应的处理。输入的两个的字符串都为标准的十进制整数，可能包含符号。
