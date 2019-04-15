@@ -53,7 +53,7 @@
 
 除了完全匹配之外，还需要支持几种模式匹配功能：  
 1. Path 变量，例如 /users/{uid}，/images/{id}/template，path 变量会用大括号表示，并且大括号里面是参数名，需要将路径的该部分放入 params 里面
-2. * 通配符，例如 /users&#47;*，任何类似 /users/xxxx，或者 /users/xxxx/xxx... 这样的路径都会被匹配上，* 字符只会出现在路径的结尾
+2. \* 通配符，例如 /users/\*，任何类似 /users/xxxx，或者 /users/xxxx/xxx... 这样的路径都会被匹配上，* 字符只会出现在路径的结尾
 3. Path 变量与正则表达式，例如 /users/{uid:[0-9]+} 只会匹配 /users/123，这样后面为数字的内容，而 /users/{name:[a-zA-Z-]+} 只会匹配 /users/higan 这样后面为用户名的内容，并且需要将 uid 或者 name 放到 params 里面
 
 >限制：  
