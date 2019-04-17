@@ -5,14 +5,15 @@ import com.bybutter.interview.Easy
 
 object Case2Kt : Case2 {
     /**
-     * 请实现十六进制数字字符串转换为十进制字符串，不包含符号。
+     * 请实现十进制数字字符串的减法，
+     * 每个值肯定为有效的十进制整数字符串，不包含符号，返回值可能包含符号。
      *
      * 例如:
-     * "0xD" = "13"
-     * "0xACDC81B0AE1E612731728A43D2528696" = "229772151012765784069777029562509723286"
+     * "5" - "2" = "3"
+     * "46" - "89" = "-43"
      */
     @Easy
-    override fun convert(hex: String): String {
+    override fun minus(value1: String, value2: String): String {
         TODO()
     }
 }

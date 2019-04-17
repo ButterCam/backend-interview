@@ -1,5 +1,5 @@
 package com.bybutter.interview
 
 interface Case2 {
-    fun convert(hex: String): String
+    fun minus(value1: String, value2: String): String
 }
