@@ -1,6 +1,7 @@
 package com.bybutter.interview
 
 import java.lang.reflect.InvocationHandler
+import java.lang.reflect.InvocationTargetException
 import java.lang.reflect.Method
 import java.lang.reflect.Proxy
 
@@ -13,7 +14,10 @@ class MockProxy<T>(private vararg val delegates: T) : InvocationHandler {
                 }else{
                     p1.invoke(delegate, *p2)
                 }
-            }catch (e: NotImplementedError){
+            } catch (e: InvocationTargetException) {
+                if (e.targetException !is NotImplementedError) {
+                    throw e
+                }
                 // ignore
             }
         }
