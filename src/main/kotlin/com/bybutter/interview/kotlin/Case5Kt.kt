@@ -2,6 +2,7 @@ package com.bybutter.interview.kotlin
 
 import com.bybutter.interview.Case5
 import com.bybutter.interview.Hard
+import com.bybutter.interview.Normal
 import com.bybutter.interview.RoutingResult
 
 
@@ -31,7 +32,7 @@ object Case5Kt : Case5 {
      * 后面为数字的内容，而 /users/{name:[a-zA-Z-]+} 只会匹配 /users/higan 这样后面为
      * 用户名的内容，并且需要将 uid 或者 name 放到 params 里面
      */
-    @Hard
+    @Normal
     override fun pathRouting(table: Map<String, String>, path: String): RoutingResult {
         TODO()
     }
