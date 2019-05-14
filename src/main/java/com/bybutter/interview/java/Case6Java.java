@@ -3,6 +3,7 @@ package com.bybutter.interview.java;
 import com.bybutter.interview.Bean;
 import com.bybutter.interview.Case6;
 
+import kotlin.NotImplementedError;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -32,6 +33,6 @@ public class Case6Java implements Case6 {
      */
     @Override
     public boolean dependentResolve(@NotNull List<Bean> beans) {
-        return false;
+        throw new NotImplementedError("TODO");
     }
 }
