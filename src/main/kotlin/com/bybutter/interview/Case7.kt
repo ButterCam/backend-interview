@@ -5,7 +5,7 @@ class LampBelt(private val list: Array<Boolean>) {
 
     fun switch(i: Int) {
         if (!switchInternal(i)) {
-            throw IndexOutOfBoundsException(i)
+            throw IndexOutOfBoundsException()
         }
         switchInternal(i - 1)
         switchInternal(i + 1)
