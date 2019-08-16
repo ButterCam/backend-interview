@@ -26,12 +26,8 @@ public class Case1Java implements Case1 {
         int value1Length = value1.length() - 1;
         int value2Length = value2.length() - 1;
         while (value1Length >= 0||value2Length >= 0||sum != 0){
-            if (value1Length >= 0){
-                sum += value1.charAt(value1Length--) - '0';
-            }
-            if (value2Length >= 0){
-                sum += value2.charAt(value2Length--) - '0';
-            }
+            sum += value1Length >= 0 ? value1.charAt(value1Length--) - '0':0;
+            sum += value2Length >= 0 ? value2.charAt(value2Length--) - '0':0;
             //余数加入到结果，低位在前
             result.append(sum % 10);
             //算进位
@@ -57,7 +53,8 @@ public class Case1Java implements Case1 {
             }
         }
 
-        return valueStr.substring(flag,length);
+        String result =valueStr.substring(flag,length);
+        return result.equals("")?"0":result;
     }
 
 }

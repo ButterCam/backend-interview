@@ -7,6 +7,7 @@ import kotlin.NotImplementedError;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
+import java.util.Set;
 
 public class Case6Java implements Case6 {
     /**
@@ -33,6 +34,7 @@ public class Case6Java implements Case6 {
      */
     @Override
     public boolean dependentResolve(@NotNull List<Bean> beans) {
+
         throw new NotImplementedError("TODO");
     }
 }

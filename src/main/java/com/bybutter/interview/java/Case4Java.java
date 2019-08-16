@@ -17,6 +17,7 @@ public class Case4Java implements Case4 {
     @Easy
     @Override
     public String routing(@NotNull Map<String, String> table, @NotNull String ip) {
+        //是否需要满足最长匹配原则？
         throw new NotImplementedError("TODO");
     }
 }
