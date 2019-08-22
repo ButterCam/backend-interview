@@ -2,8 +2,6 @@ package com.bybutter.interview.java;
 
 import com.bybutter.interview.Case7;
 import com.bybutter.interview.LampBelt;
-
-import kotlin.NotImplementedError;
 import org.jetbrains.annotations.NotNull;
 
 public class Case7Java implements Case7 {
@@ -30,9 +28,35 @@ public class Case7Java implements Case7 {
      * LampBelt.toggle 切换其中的一个灯泡（会导致周围两个灯泡一起变化）
      * 请尝试将所有灯泡都变成亮灯状态，如果无法全都变亮的话，返回 false
      * 否则返回 true，并将所有灯泡变成亮灯状态。
+     *
+     *  @Author future
+     *
+     * 一个可以实现但并不是很好的实现
+     * 总体思路是从第一盏灯依次点亮，
+     * 如这盏灯不亮，则变更这盏灯下一盏的状态
+     * 直到最后一盏时,如果未点亮 则证明无法点亮所有
      */
     @Override
     public boolean turnAllOn(@NotNull LampBelt belt) {
-        throw new NotImplementedError("TODO");
+
+        //TODO 输出日志为测试时使用
+
+        StringBuffer sb = new StringBuffer("初始数据:" + belt.getLights());
+        for (int i = 0; i< belt.getLights().size();i ++) {
+            if (!belt.getLights().get(i)) {
+                if (i != belt.getLights().size() - 1) {
+                    sb.append("，将第角标为"+(i+1)+"的灯变更状态");
+                    belt.toggle(i+1);
+                    sb.append("，变更后的数据为:" + belt.getLights());
+                } else {
+                    sb.append(",最后一盏无法点亮，返回false");
+                    System.out.println(sb.toString());
+                    return false;
+                }
+            }
+        }
+        sb.append(",全部点亮，返回true");
+        System.out.println(sb.toString());
+        return true;
     }
 }
