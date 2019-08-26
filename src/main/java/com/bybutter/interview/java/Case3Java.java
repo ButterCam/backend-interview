@@ -18,6 +18,10 @@ public class Case3Java implements Case3 {
     @NotNull
     @Override
     public String times(@NotNull String value1, @NotNull String value2) {
-        throw new NotImplementedError("TODO");
+        double v1=Double.parseDouble(value1);
+        double v2=Double.parseDouble(value2);
+        double result=v1*v2;
+        return value1+"x"+value2+"="+result;
     }
+
 }

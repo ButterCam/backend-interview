@@ -5,6 +5,7 @@ import com.bybutter.interview.Easy;
 import kotlin.NotImplementedError;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Case4Java implements Case4 {
@@ -17,6 +18,15 @@ public class Case4Java implements Case4 {
     @Easy
     @Override
     public String routing(@NotNull Map<String, String> table, @NotNull String ip) {
-        throw new NotImplementedError("TODO");
+        Map<String,String> tableCopy=new HashMap<>();
+        for(String key:table.keySet()){
+            String[] arrays=key.split("/");
+            tableCopy.put(arrays[0],table.get(key));
+        }
+        String hostName=tableCopy.get(ip);
+        if(hostName==null){
+            return null;
+        }
+        return hostName;
     }
 }

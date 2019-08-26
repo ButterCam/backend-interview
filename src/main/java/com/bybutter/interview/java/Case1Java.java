@@ -19,6 +19,10 @@ public class Case1Java implements Case1 {
     @NotNull
     @Override
     public String add(@NotNull String value1, @NotNull String value2) {
-        throw new NotImplementedError("TODO");
+
+        long v1=Long.parseLong(value1);
+        long v2=Long.parseLong(value2);
+        long result=v1+v2;
+        return value1+"+"+value2+"="+result;
     }
 }

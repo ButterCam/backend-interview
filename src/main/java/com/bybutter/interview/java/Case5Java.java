@@ -7,6 +7,7 @@ import com.bybutter.interview.RoutingResult;
 import kotlin.NotImplementedError;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Case5Java implements Case5 {
@@ -37,6 +38,22 @@ public class Case5Java implements Case5 {
     @Normal
     @Override
     public RoutingResult pathRouting(@NotNull Map<String, String> table, @NotNull String path) {
-        throw new NotImplementedError("TODO");
+        Map<String,String> param=new HashMap<>();
+        String value="";
+        boolean flag=false;
+        for(String key:table.keySet()){
+            value=table.get(key);
+            String[] arrays=key.split("/");
+            for(String s:arrays){
+                if(s.startsWith("{")&&s.endsWith("}")){
+                    String paramKey=s.substring(1,s.length()-1);
+                    String[] arrays1=path.split("/");
+                    param.put(paramKey,arrays1[arrays1.length-1]);
+                    flag=true;
+                }
+            }
+            if(flag) break;
+        }
+        return new RoutingResult(value,param);
     }
 }
